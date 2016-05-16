@@ -10,6 +10,7 @@ import Divider from 'material-ui/Divider'
 import Download from 'material-ui/svg-icons/file/file-download';
 import ArrowDropRight from 'material-ui/svg-icons/navigation-arrow-drop-right'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
+import MenuIcon from 'material-ui/svg-icons/navigation/menu'
 import { withRouter } from 'react-router'
 
 const muiTheme = getMuiTheme({
@@ -24,6 +25,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.onClick = this.onClick.bind(this);
+    this.handleChangeSingle = this.handleChangeSingle.bind(this);
+
+    this.state = {
+      valueSingle: 'view1'
+    };
   }
 
   render () {
@@ -32,12 +38,15 @@ class App extends React.Component {
         <div>
           <AppBar
             title="react-app-starter-material-ui"
-            iconElementLeft={
+            showMenuIconButton={false}
+            iconElementRight={
               <IconMenu
-                iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
+                iconButtonElement={<IconButton><MenuIcon/></IconButton>}
                 anchorOrigin={{horizontal: 'left', vertical: 'top'}}
                 targetOrigin={{horizontal: 'left', vertical: 'top'}}
                 onItemTouchTap={this.onClick}
+                onChange={this.handleChangeSingle}
+                value={this.state.valueSingle}
               >
                 <MenuItem value="view1" primaryText="View 1" />
                 <MenuItem value="view2" primaryText="View 2" />
@@ -52,6 +61,10 @@ class App extends React.Component {
 
   onClick(event, child) {
     this.props.router.push(child.props.value);
+  }
+
+  handleChangeSingle(event, value) {
+    this.setState({ valueSingle: value });
   }
 
 }
