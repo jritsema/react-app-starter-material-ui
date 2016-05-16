@@ -1,9 +1,10 @@
-# Basic example of using React with Browserify
+### react-app-starter-material-ui
 
-Run `npm install` in the directory to install React from npm. Then run:
+A starter project for writing a react app with material-ui components.
 
-```sh
-npm start
-```
+Features:
 
-to produce `bundle.js` with example code and React.
+- babel for latest JS language support
+- browserify for commonjs modules
+- react-router for UI layout and navigation
+- material-ui for style and UI components
