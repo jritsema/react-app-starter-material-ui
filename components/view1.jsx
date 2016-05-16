@@ -1,6 +1,7 @@
 import React from 'react'
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class View1 extends React.Component {
 
@@ -19,8 +20,8 @@ class View1 extends React.Component {
             This is View 1.
           </CardText>
           <CardActions expandable={true}>
-            <FlatButton label="Action1" />
-            <FlatButton label="Action2" />
+            <RaisedButton label="Action1" primary={true} />
+            <RaisedButton label="Action2" secondary={true} />
           </CardActions>
         </Card>
       </div>

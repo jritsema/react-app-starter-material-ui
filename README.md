@@ -2,9 +2,20 @@
 
 A starter project for writing a react app with material-ui components.
 
-Features:
+Front-end stack:
 
 - babel for latest JS language support
-- browserify for commonjs modules
 - react-router for UI layout and navigation
 - material-ui for style and UI components
+- browserify for commonjs modules
+- watchify for incremental builds
+- [live-server](https://github.com/tapio/live-server) for live reload during development
+
+Usage:
+
+```bash
+$ npm install
+$ npm start
+```
+
+![screenshot](screenshot.png "screenshot")
