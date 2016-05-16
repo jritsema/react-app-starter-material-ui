@@ -1,6 +1,7 @@
 {
-  "name": "react-basic-commonjs-example",
-  "description": "Basic example of using React with CommonJS",
+  "name": "react-app-starter-material-ui",
+  "version": "0.0.1",
+  "description": "A starter project for writing a react app with material-ui components",
   "private": true,
   "main": "index.js",
   "dependencies": {
