@@ -1,24 +1,19 @@
 'use strict';
 
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Router, Route, Link, browserHistory } from 'react-router'
+import injectTapEventPlugin from 'react-tap-event-plugin'
+import App from './components/app.jsx'
 
-var ExampleApplication = React.createClass({
-  render: function() {
-    var elapsed = Math.round(this.props.elapsed  / 100);
-    var seconds = elapsed / 10 + (elapsed % 10 ? '' : '.0' );
-    var message =
-      'React has been successfully running for ' + seconds + ' seconds.';
+// Needed for onTouchTap
+// Check this repo:
+// https://github.com/zilverline/react-tap-event-plugin
+injectTapEventPlugin();
 
-    return <p>{message}</p>;
-  }
-});
-
-var start = new Date().getTime();
-
-setInterval(function() {
-  ReactDOM.render(
-    <ExampleApplication elapsed={new Date().getTime() - start} />,
-    document.getElementById('container')
-  );
-}, 50);
+// Declarative route configuration
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path="/" component={App} />
+  </Router>
+), document.querySelector('#content'));
