@@ -21,6 +21,6 @@
   "scripts": {
     "build": "browserify ./index.js -t babelify -o bundle.js",
     "watch": "watchify ./index.js -v -t babelify -o bundle.js",
-    "start": "npm run watch & live-server"
+    "start": "npm run watch & live-server --wait=1000"
   }
 }
