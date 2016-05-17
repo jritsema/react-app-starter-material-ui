@@ -4,9 +4,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router, Route, IndexRoute, Link, browserHistory, hashHistory } from 'react-router'
 import injectTapEventPlugin from 'react-tap-event-plugin'
-import App from './components/app.jsx'
-import View1 from './components/view1.jsx'
-import View2 from './components/view2.jsx'
+import App from './app.jsx'
+import View1 from './view1.jsx'
+import View2 from './view2.jsx'
 
 // Needed for onTouchTap
 // Check this repo:
