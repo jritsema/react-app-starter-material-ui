@@ -7,9 +7,8 @@ Front-end stack:
 - babel for latest JS language support
 - react-router for UI layout and navigation
 - material-ui for style and UI components
-- browserify for commonjs modules
-- watchify for incremental builds
-- [live-server](https://github.com/tapio/live-server) for live reload during development
+- webpack for js transpilation and commonjs modules
+- webpack-dev-server for incremental builds on save and live reload
 
 Usage:
 
