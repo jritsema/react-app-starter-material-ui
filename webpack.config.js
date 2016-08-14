@@ -1,9 +1,23 @@
+const webpack = require('webpack')
+
 module.exports = {
-  entry: './src/index.jsx',
+  entry: {
+    app: './src/index.jsx',
+    vendor: [ 
+      'react', 
+      'react-dom',
+      'react-router',
+      'react-tap-event-plugin',
+      'material-ui',      
+    ],
+  },
   output: { 
     path: './public', 
     filename: 'bundle.js' 
   },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js')
+  ],
   module: {
     loaders: [
       {
